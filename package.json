@@ -1,29 +1,50 @@
 {
-  "name": "vue-discord",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
-  },
-  "dependencies": {
-    "vue": "^2.5.17"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.2.0",
-    "@vue/cli-plugin-eslint": "^3.2.0",
-    "@vue/cli-plugin-unit-jest": "^3.2.0",
-    "@vue/cli-service": "^3.2.0",
-    "@vue/test-utils": "^1.0.0-beta.20",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0-0",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.17"
-  }
+	"name": "vue-discord",
+	"version": "0.1.0",
+	"description": "Vue components to emulate the Discord client",
+	"author": "Brussell",
+	"license": "MIT",
+	"main": "./dist/vue-discord.umd.min.js",
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build",
+		"build-bundle": "cross-env NODE_ENV=production vue-cli-service build --target lib --name vue-discord ./src/components/index.js",
+		"lint": "vue-cli-service lint",
+		"test:unit": "vue-cli-service test:unit"
+	},
+	"dependencies": {
+		"discord-markdown": "^2.1.1",
+		"moment": "^2.23.0",
+		"vue": "^2.5.21"
+	},
+	"devDependencies": {
+		"@vue/cli-plugin-babel": "^3.2.0",
+		"@vue/cli-plugin-eslint": "^3.2.1",
+		"@vue/cli-plugin-unit-jest": "^3.2.0",
+		"@vue/cli-service": "^3.2.0",
+		"@vue/test-utils": "^1.0.0-beta.27",
+		"babel-core": "7.0.0-bridge.0",
+		"babel-eslint": "^10.0.1",
+		"babel-jest": "^23.6.0",
+		"cross-env": "^5.2.0",
+		"eslint": "^5.10.0",
+		"eslint-plugin-vue": "^5.0.0",
+		"node-sass": "^4.11.0",
+		"sass-loader": "^7.1.0",
+		"vue-template-compiler": "^2.5.21"
+	},
+	"keywords": [
+		"discord",
+		"vue",
+		"message",
+		"mock",
+		"component",
+		"markdown"
+	],
+	"files": [
+		"dist/*",
+		"src/*",
+		"*.json",
+		"*.js"
+	]
 }
